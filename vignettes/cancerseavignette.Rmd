@@ -1,0 +1,45 @@
+---
+title: "CancerSEA curated gene sets"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{CancerSEA curated gene sets}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+suppressPackageStartupMessages({
+  library(cancersea)
+  library(tibble)
+})
+```
+
+# Find available pathways
+
+```{r}
+data("available_pathways")
+available_pathways
+```
+
+# Get the gene se for a given pathway
+
+Note that genes are only those positively associated with each pathway (ie upregulated).
+
+```{r}
+data("angiogenesis")
+angiogenesis
+```
+
+# Technical
+
+```{r}
+sessionInfo()
+```
+
